@@ -46,10 +46,10 @@ export function Contact() {
                 Teléfono
               </span>
               <a
-                href="tel:+34900000000"
+                href="tel:+34671471228"
                 className="mt-1 inline-block text-base text-paper transition-colors hover:text-green-bright sm:text-lg"
               >
-                +34 900 000 000
+                671 47 12 28
               </a>
             </p>
           </div>

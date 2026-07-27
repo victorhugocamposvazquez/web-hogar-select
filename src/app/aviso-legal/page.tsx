@@ -29,7 +29,7 @@ export default function AvisoLegalPage() {
           </li>
           <li>
             <strong>Teléfono:</strong>{" "}
-            <a href="tel:+34900000000">+34 900 000 000</a>
+            <a href="tel:+34671471228">671 47 12 28</a>
           </li>
         </ul>
         <p>
