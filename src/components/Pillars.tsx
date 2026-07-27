@@ -69,7 +69,7 @@ export function Pillars() {
 
             <div className="flex items-center bg-ink px-5 py-12 sm:px-8 sm:py-16 md:px-14 lg:px-20">
               <Reveal className="w-full max-w-lg">
-                <span className="font-display text-5xl text-paper/10 sm:text-6xl md:text-7xl">
+                <span className="font-display text-5xl text-paper/40 sm:text-6xl md:text-7xl">
                   {pillar.number}
                 </span>
                 <div

@@ -50,7 +50,7 @@ export function Process() {
               className="h-full"
             >
               <article className="interactive-lift group relative h-full border border-line bg-ink/60 p-6 backdrop-blur-sm transition-colors hover:border-green/35 hover:bg-ink-lift sm:p-8 md:p-9">
-                <span className="font-display text-4xl text-transparent [-webkit-text-stroke:1px_rgba(242,244,247,0.22)] transition-colors group-hover:[-webkit-text-stroke-color:rgba(85,196,92,0.55)] sm:text-5xl">
+                <span className="font-display text-4xl text-paper/35 transition-colors group-hover:text-green-bright/70 sm:text-5xl">
                   {step.number}
                 </span>
                 <h3 className="mt-4 font-display text-2xl font-medium text-paper sm:mt-6 sm:text-3xl">
