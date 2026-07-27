@@ -15,6 +15,8 @@ export function Reveal({ children, className = "", delay }: RevealProps) {
     const node = ref.current;
     if (!node) return;
 
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -22,7 +24,10 @@ export function Reveal({ children, className = "", delay }: RevealProps) {
           observer.unobserve(node);
         }
       },
-      { threshold: 0.18, rootMargin: "0px 0px -8% 0px" },
+      {
+        threshold: isMobile ? 0.08 : 0.18,
+        rootMargin: isMobile ? "0px 0px -4% 0px" : "0px 0px -8% 0px",
+      },
     );
 
     observer.observe(node);

@@ -45,25 +45,33 @@ export function Header() {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-40 transition-all duration-500 ${
-        scrolled
-          ? "border-b border-line bg-ink/80 backdrop-blur-xl"
+      className={`fixed inset-x-0 top-0 z-40 pt-[env(safe-area-inset-top)] transition-all duration-500 ${
+        scrolled || open
+          ? "border-b border-line bg-ink/90 backdrop-blur-xl"
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-10">
+      <div className="relative z-50 mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:h-20 sm:px-6 lg:px-10">
         <a
           href="#inicio"
-          className="relative z-10 flex items-center gap-3 transition-opacity hover:opacity-80"
+          className="relative flex items-center gap-3 transition-opacity hover:opacity-80"
+          onClick={() => setOpen(false)}
         >
           <Image
             src="/logo-white.png"
             alt="Hogar Select"
             width={160}
             height={80}
-            className="h-12 w-auto object-contain"
+            className="h-9 w-auto object-contain sm:h-12"
             priority
           />
         </a>
@@ -90,40 +98,54 @@ export function Header() {
 
         <button
           type="button"
+          aria-expanded={open}
+          aria-controls="mobile-menu"
           aria-label={open ? "Cerrar menú" : "Abrir menú"}
-          className="relative z-10 flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
+          className="relative flex h-11 w-11 items-center justify-center lg:hidden"
           onClick={() => setOpen((v) => !v)}
         >
-          <span
-            className={`h-px w-6 bg-paper transition-transform duration-300 ${open ? "translate-y-[4px] rotate-45" : ""}`}
-          />
-          <span
-            className={`h-px w-6 bg-paper transition-opacity duration-300 ${open ? "opacity-0" : ""}`}
-          />
-          <span
-            className={`h-px w-6 bg-paper transition-transform duration-300 ${open ? "-translate-y-[4px] -rotate-45" : ""}`}
-          />
+          <span className="sr-only">{open ? "Cerrar" : "Menú"}</span>
+          <span className="relative flex h-4 w-6 flex-col justify-between">
+            <span
+              className={`block h-px w-full bg-paper transition-transform duration-300 ${open ? "translate-y-[7.5px] rotate-45" : ""}`}
+            />
+            <span
+              className={`block h-px w-full bg-paper transition-opacity duration-300 ${open ? "opacity-0" : ""}`}
+            />
+            <span
+              className={`block h-px w-full bg-paper transition-transform duration-300 ${open ? "-translate-y-[7.5px] -rotate-45" : ""}`}
+            />
+          </span>
         </button>
       </div>
 
       <div
-        className={`fixed inset-0 bg-ink/95 backdrop-blur-xl transition-all duration-500 lg:hidden ${
+        id="mobile-menu"
+        className={`fixed inset-0 z-40 bg-ink/97 backdrop-blur-xl transition-all duration-500 lg:hidden ${
           open
             ? "pointer-events-auto opacity-100"
             : "pointer-events-none opacity-0"
         }`}
+        style={{ paddingTop: "calc(4rem + env(safe-area-inset-top))" }}
       >
-        <nav className="flex h-full flex-col items-center justify-center gap-8">
+        <nav className="flex h-full flex-col items-center justify-center gap-7 px-6 pb-16">
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="font-display text-4xl text-paper transition-colors hover:text-green-bright"
+              className="font-display text-3xl text-paper transition-colors active:text-green-bright sm:text-4xl"
             >
               {link.label}
             </a>
           ))}
+          <a
+            href="#contacto"
+            onClick={() => setOpen(false)}
+            className="mt-4 border border-green/50 bg-green/10 px-6 py-3.5 text-[12px] font-medium tracking-[0.16em] text-paper uppercase"
+          >
+            Hablar con nosotros
+          </a>
         </nav>
       </div>
     </header>

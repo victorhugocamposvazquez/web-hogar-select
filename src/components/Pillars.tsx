@@ -37,12 +37,12 @@ const pillars = [
 export function Pillars() {
   return (
     <section id="pilares" className="bg-ink-soft">
-      <div className="mx-auto max-w-7xl px-6 pt-24 pb-10 lg:px-10">
+      <div className="mx-auto max-w-7xl px-5 pt-16 pb-8 sm:px-6 sm:pt-24 sm:pb-10 lg:px-10">
         <Reveal>
           <p className="text-[12px] tracking-[0.28em] text-blue-bright uppercase">
             Tres pilares
           </p>
-          <h2 className="mt-4 max-w-2xl font-display text-4xl font-medium text-paper md:text-5xl">
+          <h2 className="mt-4 max-w-2xl font-display text-[2rem] leading-tight font-medium text-paper sm:text-4xl md:text-5xl">
             Todo lo que tu hogar necesita para cuidarte
           </h2>
         </Reveal>
@@ -52,11 +52,11 @@ export function Pillars() {
         {pillars.map((pillar, index) => (
           <article
             key={pillar.id}
-            className={`grid min-h-[70vh] lg:grid-cols-2 ${
+            className={`grid lg:min-h-[70vh] lg:grid-cols-2 ${
               index % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""
             }`}
           >
-            <div className="relative min-h-[48vh] overflow-hidden lg:min-h-full">
+            <div className="relative aspect-[4/3] overflow-hidden sm:aspect-[16/10] lg:aspect-auto lg:min-h-full">
               <Image
                 src={pillar.image}
                 alt={pillar.alt}
@@ -67,18 +67,18 @@ export function Pillars() {
               <div className="absolute inset-0 bg-ink/25" />
             </div>
 
-            <div className="flex items-center bg-ink px-8 py-16 md:px-14 lg:px-20">
+            <div className="flex items-center bg-ink px-5 py-12 sm:px-8 sm:py-16 md:px-14 lg:px-20">
               <Reveal className="w-full max-w-lg">
-                <span className="font-display text-6xl text-paper/10 md:text-7xl">
+                <span className="font-display text-5xl text-paper/10 sm:text-6xl md:text-7xl">
                   {pillar.number}
                 </span>
                 <div
-                  className={`mt-4 h-1 w-16 bg-gradient-to-r ${pillar.accent}`}
+                  className={`mt-3 h-1 w-14 bg-gradient-to-r sm:mt-4 sm:w-16 ${pillar.accent}`}
                 />
-                <h3 className="mt-8 font-display text-5xl font-medium text-paper md:text-6xl">
+                <h3 className="mt-6 font-display text-4xl font-medium text-paper sm:mt-8 sm:text-5xl md:text-6xl">
                   {pillar.title}
                 </h3>
-                <p className="mt-6 text-lg leading-relaxed font-light text-paper-muted">
+                <p className="mt-4 text-base leading-relaxed font-light text-paper-muted sm:mt-6 sm:text-lg">
                   {pillar.copy}
                 </p>
               </Reveal>
