@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Outfit } from "next/font/google";
+import { CookieBanner } from "@/components/CookieBanner";
 import "./globals.css";
 
 const display = Cormorant_Garamond({
@@ -41,7 +42,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={`${display.variable} ${sans.variable} h-full`}>
-      <body className="min-h-full antialiased">{children}</body>
+      <body className="min-h-full antialiased">
+        {children}
+        <CookieBanner />
+      </body>
     </html>
   );
 }
