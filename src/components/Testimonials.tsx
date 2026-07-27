@@ -15,7 +15,7 @@ const testimonials = [
   },
   {
     quote:
-      "El ritual de belleza en casa que nos propusieron es sencillo y elegante. Se nota que hay criterio detrás de cada recomendación.",
+      "El ritual de belleza en casa que nos propusieron es sencillo y elegante. Se nota el cuidado detrás de cada recomendación.",
     name: "Elena V.",
     role: "Cliente · Belleza",
   },

@@ -17,7 +17,7 @@ const pillars = [
     title: "Descanso",
     accent: "from-blue-bright to-green",
     number: "02",
-    copy: "Camas, textiles y entornos pensados para un sueño profundo. Porque recuperarse también es producir.",
+    copy: "Camas, textiles y entornos pensados para un sueño profundo. Porque descansar bien cambia el resto del día.",
     image:
       "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1600&q=80",
     alt: "Dormitorio sereno para un descanso profundo",

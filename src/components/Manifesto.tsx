@@ -24,9 +24,9 @@ export function Manifesto() {
               día a día.
             </p>
             <p>
-              No vendemos tendencias. Curamos productos con criterio: materiales
-              nobles, tecnología silenciosa y resultados que se notan desde la
-              primera noche.
+              No vendemos tendencias. Escogemos cada producto con rigor:
+              materiales de calidad, tecnología silenciosa y resultados que se
+              notan desde la primera noche.
             </p>
             <div className="section-rule mt-8 max-w-md sm:mt-10" />
             <p className="pt-2 font-display text-xl text-paper italic sm:text-2xl md:text-3xl">

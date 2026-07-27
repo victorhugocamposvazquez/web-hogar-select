@@ -3,8 +3,8 @@ import { Reveal } from "./Reveal";
 
 const promises = [
   {
-    title: "Curaduría real",
-    text: "No trabajamos con volumen. Trabajamos con estándares.",
+    title: "Selección exigente",
+    text: "No trabajamos por volumen. Solo proponemos lo que cumple nuestros estándares.",
   },
   {
     title: "Asesoramiento cercano",

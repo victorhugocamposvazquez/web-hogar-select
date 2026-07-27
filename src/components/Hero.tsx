@@ -41,8 +41,8 @@ export function Hero() {
             className="animate-fade-up mt-5 max-w-xl text-base leading-relaxed font-light text-[#d5dae3] sm:mt-7 sm:text-lg md:text-xl"
             style={{ animationDelay: "0.18s" }}
           >
-            Curamos productos de salud, descanso y belleza pensados para elevar
-            la calidad de vida dentro de tu hogar.
+            Seleccionamos productos de salud, descanso y belleza pensados para
+            elevar la calidad de vida dentro de tu hogar.
           </p>
           <div
             className="animate-fade-up mt-8 flex w-full flex-col gap-3 sm:mt-10 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center sm:gap-4"

@@ -14,7 +14,7 @@ const items = [
   {
     category: "Belleza",
     title: "Rituales de cuidado en casa",
-    detail: "Dispositivos y essentials para una rutina elegante y efectiva.",
+    detail: "Dispositivos y esenciales para una rutina elegante y efectiva.",
   },
   {
     category: "Ambiente",
@@ -40,7 +40,7 @@ export function Collection() {
             </div>
             <p className="max-w-md text-sm leading-relaxed font-light text-paper-muted sm:text-base md:text-right">
               Cada producto pasa un filtro de calidad, diseño y utilidad real.
-              Menos catálogo. Más criterio.
+              Menos catálogo. Más acierto.
             </p>
           </div>
         </Reveal>
