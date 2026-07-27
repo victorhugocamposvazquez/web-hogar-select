@@ -11,6 +11,15 @@ npm run dev
 
 Abre [http://localhost:3000](http://localhost:3000).
 
+## Producción (Vercel)
+
+El proyecto está conectado a GitHub. Cada push a `main` despliega automáticamente en Vercel.
+
+- Framework: Next.js (detección automática)
+- Build: `npm run build`
+- Node: `>=20.9.0`
+- Sin variables de entorno requeridas
+
 ## Stack
 
 - Next.js 16
